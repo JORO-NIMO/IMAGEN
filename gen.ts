@@ -19,7 +19,8 @@ const App = () => {
       instances: { prompt: prompt },
       parameters: { "sampleCount": 1 }
     };
-    const apiKey = "";
+    
+    const apiKey = process.env.REACT_APP_API_KEY;
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
 
     // Implementing exponential backoff for API calls
